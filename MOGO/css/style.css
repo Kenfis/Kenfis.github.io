@@ -1,0 +1,412 @@
+@font-face {
+  font-family: 'Monserrat Bold';
+  src: url('../fonts/Montserrat Bold.ttf');
+}
+@font-face {
+  font-family: 'Monserrat Regular';
+  src: url('../fonts/Montserrat Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto Light Italic';
+  src: url('../fonts/Roboto-LightItalic.ttf');
+}
+@font-face {
+  font-family: 'Kaushan Script Regular';
+  src: url('../fonts/KaushanScript-Regular.ttf');
+}
+.mon-b {
+  font-family: 'Monserrat Bold';
+}
+.mon-r {
+  font-family: 'Monserrat Regular';
+}
+.rob-r {
+  font-family: 'Roboto Regular';
+}
+.rob-li {
+  font-family: 'Roboto Light Italic';
+}
+.kau {
+  font-family: 'Kaushan Script Regular';
+}
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-family: 'Monserrat Regular';
+  font-size: 1.5rem;
+  color: #333;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  margin: 30px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
+  font-family: 'Monserrat Bold';
+  font-size: 3rem;
+  color: #fff;
+}
+.header-nav {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.header-nav-link {
+  margin: 1.2rem 3rem;
+  display: inline-block;
+  vertical-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.1s linear;
+  position: relative;
+}
+.header-nav-link:hover {
+  color: #fce38a;
+}
+.header-nav-link:after {
+  margin-top: 1.5rem;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-color: #fce38a;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+.header-nav-link:hover:after {
+  opacity: 1;
+}
+.header-nav .icon {
+  margin: 1.2rem 2.3rem;
+}
+.header-nav .icon-last {
+  margin: 1.2rem 0 1.2rem 2rem;
+}
+.intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/background\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.intro-title {
+  font-size: 15rem;
+  line-height: 0.93;
+  font-family: 'Monserrat Bold';
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.intro-title:after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+  margin: 70px auto;
+}
+.intro-suptitle {
+  padding-bottom: 5.5rem;
+  font-size: 7.2rem;
+  font-family: 'Kaushan Script Regular';
+  color: #fff;
+  text-align: center;
+}
+.intro-slider {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.intro-slider-item {
+  text-align: left;
+  width: 23%;
+  border-top: 3px solid #fff;
+  padding: 2.5rem 0;
+  opacity: 0.7;
+}
+.intro-slider-item:before {
+  display: block;
+  content: "";
+  width: 25%;
+  height: 3px;
+  background-color: #f38181;
+  transform: translateY(-28px);
+  opacity: 0;
+}
+.intro-slider .item-2:before {
+  transform: translate3d(100%, -28px, 0);
+}
+.intro-slider .item-3:before {
+  transform: translate3d(200%, -28px, 0);
+}
+.intro-slider .item-4:before {
+  transform: translate3d(300%, -28px, 0);
+}
+.intro-slider span {
+  font-family: 'Monserrat Bold';
+  font-size: 2.4rem;
+}
+.intro-slider-item:hover,
+.intro-slider-item:hover:before {
+  opacity: 1;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  vertical-align: center;
+  padding: 0.85em 2.14em;
+  border: 3px solid #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Monserrat Bold';
+  transition: background-color 0.1s linear, color 0.1s linear;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+.section {
+  padding: 110px 0 75px 0;
+}
+.section-header {
+  text-align: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  color: #333;
+}
+.section-suptitle {
+  font-family: 'Kaushan Script Regular';
+  font-size: 2.4rem;
+  padding-bottom: 23px;
+}
+.section-title {
+  font-family: 'Monserrat Bold';
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.section-title:after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 40px auto 0 auto;
+}
+.section-text {
+  font-family: 'Roboto Regular';
+  font-size: 1.5rem;
+  color: #999999;
+  line-height: 1.6;
+  margin-top: 45px;
+  margin-bottom: 90px;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.about-item {
+  width: 30%;
+  background: #95e1d3;
+}
+.about-img {
+  background: linear-gradient(to top, #fce38a, #f38181);
+  height: 250px;
+  transition: transform 0.1s linear;
+  position: relative;
+}
+.about-img img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  transition: opacity 0.1s linear;
+}
+.about-item:hover .about-img img {
+  opacity: 0.1;
+}
+.about-item:hover .about-text {
+  opacity: 1;
+}
+.about-item:hover .about-img {
+  transform: translate3d(-10px, -10px, 0);
+}
+.about-text {
+  opacity: 0;
+  width: 100%;
+  z-index: 2;
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Monserrat Bold';
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate3d(0%, -50%, 0);
+  text-align: center;
+  transition: opacity 0.2s linear;
+  line-height: 1.5;
+}
+.statistic {
+  background-color: #95e1d3;
+}
+.statistic .stat {
+  display: flex;
+}
+.statistic .stat-item {
+  height: 100%;
+  flex: 1 1 0;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+.statistic .stat-item-count {
+  margin: 90px 0 15px 0;
+  font-size: 7.2rem;
+  font-family: 'Monserrat Bold';
+}
+.statistic .stat-item-text {
+  font-size: 1.4rem;
+  margin-bottom: 90px;
+  text-transform: uppercase;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services-item {
+  flex: 1 1 0;
+  position: relative;
+  padding-left: 94px;
+  min-width: 330px;
+  padding-top: 50px;
+}
+.services-icon {
+  margin: 0 30px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 1;
+}
+.services-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.services-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-family: 'Roboto Regular';
+  color: #999999;
+  padding-bottom: 50px;
+  padding-right: 20px;
+}
+.services-item:nth-child(1n+4) {
+  border-top: 1px solid #e5e5e5;
+}
+.section-devices {
+  padding-bottom: 0;
+  background: url(../img/background\ 2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.section-devices .devices {
+  width: 640px;
+  position: relative;
+  margin: 0 auto;
+}
+.section-devices .devices-item {
+  display: block;
+}
+.section-devices .devices-2 {
+  position: absolute;
+  right: -40px;
+  bottom: -100px;
+}
+.wedo {
+  display: flex;
+}
+.wedo-item {
+  width: 50%;
+  margin-right: 30px;
+  overflow: hidden;
+}
+.wedo-item img {
+  height: 100%;
+}
+.wedo-accordion-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate3d(50%, -50%, 0);
+  color: #ccc;
+  font-size: 2rem;
+}
+.wedo-accordion .icon-right {
+  right: 0;
+  transform: translate3d(90%, -50%, 0);
+}
+.wedo-accordion .icon-right .icon-up-open {
+  position: absolute;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  display: none;
+}
+.wedo-accordion-item {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+.wedo-accordion-item .active {
+  display: block;
+}
+.wedo-accordion-header {
+  cursor: pointer;
+  position: relative;
+  padding: 25px 60px;
+}
+.wedo-accordion-content {
+  padding: 15px 20px;
+  border-top: 1px solid #e5e5e5;
+  font-family: 'Roboto Light Italic';
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #999999;
+}
+.wedo-accordion-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
