@@ -4,32 +4,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>MOGO</title>
+    <title>MoGo</title>
     <link rel="stylesheet" href="css/fontello.css" type="text/css">
     <link rel="stylesheet" href="css/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="slick.min.js">
   </head>
 <body>
 
-<div class="header">
+<div class="header" id="header"> <!-- active fixed -->
   <div class="container">
     <div class="header-inner">
-      <div class="header-logo">MoGo</div>
-      <nav class="header-nav">
-        <a href="#" class="header-nav-link">About</a>
-        <a href="#" class="header-nav-link">Service</a>
-        <a href="#" class="header-nav-link">Blog</a>
-        <a href="#" class="header-nav-link">Work</a>
-        <a href="#" class="header-nav-link">Contact</a>
+      <div class="header-logo">
+        <a href="#" data-scroll="#intro">MOGO</a>
+      </div>
+      <nav class="header-nav" id="header-nav">
+        <a href="#" data-scroll="#about" class="header-nav-link">About</a>
+        <a href="#" data-scroll="#services" class="header-nav-link">Service</a>
+        <a href="#" data-scroll="#blog" class="header-nav-link">Blog</a>
+        <a href="#" data-scroll="#work" class="header-nav-link">Work</a>
+        <a href="#" data-scroll="#contact" class="header-nav-link">Contact</a>
         <a href="#" class="header-nav-link icon"><i class="icon-basket"></i></a>
         <a href="#" class="header-nav-link icon-last"><i class="icon-search"></i></a>
       </nav>
+      <button class="nav-toggle" id="nav-toggle"  type="button"> <!-- active -->
+        <span class="nav-toggle-item">Menu</span>
+      </button>
     </div>
   </div>
 </div>
 
-<div class="intro">
+<div class="intro"  id="intro"> 
   <div class="container">
     <div class="intro-inner">
       <h2 class="intro-suptitle">Creative Template</h2>
@@ -57,7 +63,7 @@
   </div>
 </div>
 
-<section class="section">
+<section class="section" id="about">
   <div class="container">
     <div class="section-header">
       <h3 class="section-suptitle">What we do</h3>
@@ -149,7 +155,7 @@
 
 
 
-<section class="section">
+<section class="section" id="services">
   <div class="container">
     <div class="section-header">
       <h3 class="section-suptitle">We work with</h3>
@@ -216,7 +222,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="blog">
   <div class="container">
     <div class="section-header">
       <h3 class="section-suptitle">Service</h3>
@@ -233,7 +239,7 @@
       <div class="wedo-item">
         <div class="wedo-accordion">
           <div class="wedo-accordion-item active">
-            <div class="wedo-accordion-header">
+            <div class="wedo-accordion-header" data-collapse="#wedo-1">
               <div class="wedo-accordion-icon">
                 <img src="img/icons/PICTURE.png" alt="">
               </div>
@@ -243,15 +249,15 @@
               </div>
               <div class="wedo-accordion-title">Photography</div>
             </div>
-            <div class="wedo-accordion-content">
+            <div class="wedo-accordion-content" id="wedo-1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
               aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
               occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
           </div>
-          <div class="wedo-accordion-item active">
-            <div class="wedo-accordion-header">
+          <div class="wedo-accordion-item">
+            <div class="wedo-accordion-header" data-collapse="#wedo-2">
               <div class="wedo-accordion-icon">
                 <img src="img/icons/EQUALIZER.png" alt="">
               </div>
@@ -261,16 +267,16 @@
               </div>
               <div class="wedo-accordion-title">creativity</div>
             </div>
-            <!-- <div class="wedo-accordion-content">
+            <div class="wedo-accordion-content" id="wedo-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis
               aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
               occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div> -->
+            </div>
           </div>
           <div class="wedo-accordion-item active">
-            <div class="wedo-accordion-header">
+            <div class="wedo-accordion-header" data-collapse="#wedo-3">
               <div class="wedo-accordion-icon">
                 <img src="img/icons/BULLSEYE.png" alt="">
               </div>
@@ -280,13 +286,13 @@
               </div>
               <div class="wedo-accordion-title">web design</div>
             </div>
-            <!-- <div class="wedo-accordion-content">
+            <div class="wedo-accordion-content" id="wedo-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis
               aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
               occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div> -->
+            </div>
           </div>
         </div>
       </div>
@@ -379,7 +385,7 @@
 
 
 
-<section class="section">
+<section class="section" id="work">
   <div class="container">
     <div class="section-header">
       <h3 class="section-suptitle">What we do</h3>
@@ -457,15 +463,17 @@
     <div class="slider">
       <a href="#" class="pref"><i class="icon-left-open"></i></a>
       <a href="#" class="next"><i class="icon-right-open"></i></a>
-      <div class="slider-item">
-        <div class="slider-img">
-          <img src="img/comment.jpg" alt="">
+      <div data-slider>
+        <div class="slider-item">
+          <div class="slider-img">
+            <img src="img/comment.jpg" alt="">
+          </div>
+          <div class="slider-text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+          </div>
+          <div class="slider-author">Joshua Earle</div>
         </div>
-        <div class="slider-text">
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
-        </div>
-        <div class="slider-author">Joshua Earle</div>
       </div>
     </div>
   </div>
@@ -574,7 +582,7 @@
 </section>
 
 
-<section class="section section-map">
+<section class="section section-map" id="contact">
   <div class="container">
     <div class="section-header">
       <h3 class="section-suptitle suptitle-map"><i class="icon-location"></i></h3>
@@ -689,6 +697,12 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<script src="app.js"></script>
 </body>
 </html>
 

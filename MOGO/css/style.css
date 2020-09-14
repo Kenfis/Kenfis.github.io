@@ -50,20 +50,22 @@ body {
   padding: 0 15px;
 }
 .header {
-  margin: 30px 0;
+  padding: 30px 0;
   position: absolute;
   width: 100%;
   z-index: 1000;
+  transition: background-color 0.1s linear;
 }
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header-logo {
+.header-logo a {
   font-family: 'Monserrat Bold';
   font-size: 3rem;
   color: #fff;
+  text-decoration: none;
 }
 .header-nav {
   text-transform: uppercase;
@@ -103,6 +105,73 @@ body {
 }
 .header-nav .icon-last {
   margin: 1.2rem 0 1.2rem 2rem;
+}
+.header.active {
+  background-color: #e78685;
+}
+.header.fixed {
+  background-color: #e78685;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 6px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.nav-toggle {
+  display: none;
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 30px;
+  padding: 15px 0;
+  transform: translate3d(-50%, 0, 0);
+  cursor: pointer;
+}
+.nav-toggle-item {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  transition: background 0.2s linear;
+}
+.nav-toggle.active .nav-toggle-item {
+  background: none;
+}
+.nav-toggle.active .nav-toggle-item:before {
+  transform-origin: right top;
+  transform: rotate(-45deg) translateX(3px);
+}
+.nav-toggle.active .nav-toggle-item:after {
+  transform-origin: right bottom;
+  transform: rotate(45deg) translateX(3px);
+}
+.nav-toggle:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.nav-toggle-item:before,
+.nav-toggle-item:after {
+  transition: transform 0.2s linear;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+}
+.nav-toggle-item:before {
+  top: -8px;
+}
+.nav-toggle-item:after {
+  bottom: -8px;
 }
 .intro {
   display: flex;
@@ -404,15 +473,22 @@ body {
 .wedo-accordion .icon-right .icon-up-open {
   position: absolute;
   left: 0;
-  transform: translate3d(0, 0, 0);
+  top: 100%;
+  transform: translate3d(0, -50%, 0);
   display: none;
 }
 .wedo-accordion-item {
   border: 1px solid #e5e5e5;
   margin-bottom: 10px;
 }
-.wedo-accordion-item .active {
+.wedo-accordion-item .active .wedo-accordion-content {
   display: block;
+}
+.wedo-accordion-item .active .icon-up-open {
+  display: block;
+}
+.wedo-accordion-item .active .icon-down-open {
+  display: none;
 }
 .wedo-accordion-header {
   cursor: pointer;
@@ -420,6 +496,7 @@ body {
   padding: 25px 60px;
 }
 .wedo-accordion-content {
+  display: none;
   padding: 15px 20px;
   border-top: 1px solid #e5e5e5;
   font-family: 'Roboto Light Italic';
@@ -1076,6 +1153,33 @@ body {
   }
   .header-nav {
     display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    background-color: #e78685;
+    transition: opacity 0.1s linear, background-color 0.1s linear;
+  }
+  .header-nav .icon {
+    margin: 0;
+  }
+  .header-nav .icon-last {
+    margin: 0;
+  }
+  .header-nav-link {
+    text-align: right;
+    margin: 0;
+    padding: 10px 27px;
+    display: block;
+  }
+  .header-nav-link:after {
+    margin: 0;
+  }
+  .header-nav.active {
+    display: block;
+  }
+  .nav-toggle {
+    display: block;
   }
   .intro-slider-text {
     display: none;
